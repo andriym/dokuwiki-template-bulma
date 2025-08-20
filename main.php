@@ -62,6 +62,10 @@ $sidebarElement = tpl_getConf('sidebarIsNav') ? 'nav' : 'aside';
 
             <!-- SIDEBAR -->
             <div id="bulma-sidebar" class="sidebar column is-2">
+                <div id="bulma-pagetools">
+                    <h3 class="has-text-grey-light is-size-7">Page tools</h3>
+                    <?php _tpl_page_tools(); ?>
+                </div><!-- /bulma-pagetools -->			
                 <?php if($showSidebar): ?>
                     <nav class="content is-small">
                         <?php tpl_include_page($conf['sidebar'], true, true) ?>
@@ -92,10 +96,6 @@ $sidebarElement = tpl_getConf('sidebarIsNav') ? 'nav' : 'aside';
                     <?php _tpl_searchform() ?>
                 </div>
                 <?php if ($showToc) _tpl_toc(); ?>
-                <div id="bulma-pagetools" style="position: sticky; top: 0px">
-                    <h3 class="has-text-grey-light is-size-7">Page tools</h3>
-                    <?php _tpl_page_tools(); ?>
-                </div><!-- /bulma-pagetools -->
             </div><!-- /bulma-toc -->
 
         </div><!-- /columns -->
